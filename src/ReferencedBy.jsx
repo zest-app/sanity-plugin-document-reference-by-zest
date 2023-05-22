@@ -22,12 +22,6 @@ const ReferencedBy = (props) => {
                 Documents which reference this document ({referringDocuments.length})
               </div>
               {referringDocuments?.map((document) => {
-                const obj = {
-                  name: document.name,
-                  updatedAt: new Date(document._updatedAt),
-                  image: document.detailImage,
-                }
-
                 const schemaType = schema.get(document._type)
                 const documentType =
                   document._type.charAt(0).toUpperCase() + document._type.slice(1)
